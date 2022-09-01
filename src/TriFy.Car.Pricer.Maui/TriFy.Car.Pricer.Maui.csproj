@@ -6,7 +6,7 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>TriFy.Car.Pricer.Maui</RootNamespace>
+		<RootNamespace>TriFy.Car.Pricer</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -39,7 +39,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -47,5 +46,43 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\back.svg" />
+	  <None Remove="Resources\Images\budget.svg" />
+	  <None Remove="Resources\Images\child.svg" />
+	  <None Remove="Resources\Images\date.svg" />
+	  <None Remove="Resources\Images\dots.svg" />
+	  <None Remove="Resources\Images\font.svg" />
+	  <None Remove="Resources\Images\isotipo.svg" />
+	  <None Remove="Resources\Images\lock.svg" />
+	  <None Remove="Resources\Images\logo.svg" />
+	  <None Remove="Resources\Images\logout.svg" />
+	  <None Remove="Resources\Images\man.svg" />
+	  <None Remove="Resources\Images\menu.svg" />
+	  <None Remove="Resources\Images\woman.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Controls\VerticalFieldView.xaml.cs">
+	    <DependentUpon>VerticalFieldView.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Controls\VerticalFieldView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Models\" />
+	  <Folder Include="ViewModels\" />
+	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerTimeoutExceptionTriFyCarPricerMauiHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>
