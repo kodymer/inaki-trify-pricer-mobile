@@ -1,4 +1,6 @@
-﻿namespace TriFy.Car.Pricer.Maui
+﻿using TriFy.Car.Pricer.Views;
+
+namespace TriFy.Car.Pricer
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }
