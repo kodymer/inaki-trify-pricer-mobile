@@ -48,6 +48,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Roboto-Black.ttf" />
+	  <None Remove="Resources\Fonts\Roboto-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Roboto-Medium.ttf" />
+	  <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
 	  <None Remove="Resources\Images\back.svg" />
 	  <None Remove="Resources\Images\budget.svg" />
 	  <None Remove="Resources\Images\child.svg" />

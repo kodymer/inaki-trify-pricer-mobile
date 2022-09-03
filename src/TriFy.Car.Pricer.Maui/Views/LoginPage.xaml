@@ -9,7 +9,7 @@
     <ScrollView>
 
         <StackLayout 
-            Margin="25, 25, 25, 0">
+            Margin="25, 35, 25, 10">
 
             <Image 
             Source="logo.png"              
@@ -57,7 +57,9 @@
             WidthRequest="200"
             Margin="0, 15, 0, 0"/>
 
-            <HorizontalStackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center" >
+            <HorizontalStackLayout 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="Center" >
 
                 <Label 
                 Text="¿No tienes una cuenta?" 
@@ -79,7 +81,7 @@
             </HorizontalStackLayout>
 
         </StackLayout>
-        
+
     </ScrollView>
-    
+
 </ContentPage>
