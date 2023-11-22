@@ -4,6 +4,42 @@
              x:Class="TriFy.Car.Pricer.Maui.Controls.VerticalFieldView"
              x:Name="this">
 
+    <ContentView.Resources>
+
+        <ControlTemplate x:Key="Multiline">
+            
+            <VerticalStackLayout BindingContext="{x:Reference this}" >
+
+                <Label 
+                    Text="{ TemplateBinding DisplayName }" 
+                    HorizontalOptions="StartAndExpand"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    Margin="10, 15, 0, 5" />
+
+                <Frame 
+                    CornerRadius="10" 
+                    BackgroundColor="#465688" 
+                    BorderColor="Transparent" 
+                    HasShadow="True" 
+                    HorizontalOptions="FillAndExpand" 
+                    Padding="20, 5, 20, 3" 
+                    HeightRequest="50">
+
+                    <Editor 
+                        Keyboard="{ TemplateBinding Keyboard }" 
+                        BackgroundColor="Transparent" 
+                        FontSize="Medium"
+                        Text="{ TemplateBinding Value }"/>
+
+                </Frame>
+
+            </VerticalStackLayout>
+            
+        </ControlTemplate>
+        
+    </ContentView.Resources>
+
     <VerticalStackLayout BindingContext="{x:Reference this}" >
         
         <Label 
@@ -24,7 +60,6 @@
             
             <Entry 
                 Keyboard="{Binding Keyboard, FallbackValue={ x:Static Keyboard.Default }}" 
-                TextColor="{StaticResource White}" 
                 BackgroundColor="Transparent" 
                 IsPassword="{Binding IsPassword}"
                 FontSize="Medium" 

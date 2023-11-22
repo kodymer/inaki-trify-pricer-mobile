@@ -12,71 +12,77 @@
             Margin="25, 35, 25, 10">
 
             <Image 
-            Source="logo.png"              
-            WidthRequest="130" 
-            Margin="0, 0, 0, 10" />
+                Source="logo.png"              
+                WidthRequest="130" 
+                Margin="0, 0, 0, 10" />
 
             <controls:VerticalFieldView 
-            x:Name="email"
-            Keyboard="Email" 
-            DisplayName="Correo electrónico" />
+                x:Name="email"
+                Keyboard="Email" 
+                DisplayName="Correo electrónico" />
 
             <controls:VerticalFieldView
-            x:Name="password"
-            Keyboard="Default" 
-            IsPassword="True"
-            DisplayName="Contraseña" />
+                x:Name="password"
+                Keyboard="Default" 
+                IsPassword="True"
+                DisplayName="Contraseña" />
 
             <controls:VerticalFieldView 
-            x:Name="campaign"
-            Keyboard="Default" 
-            DisplayName="Campaña" />
+                x:Name="campaign"
+                Keyboard="Default" 
+                DisplayName="Campaña" />
+
+            <controls:VerticalFieldView 
+                x:Name="info"
+                Keyboard="Default" 
+                DisplayName="Información adicional"
+                ControlTemplate="{StaticResource Multiline}"/>
 
             <Button 
-            Text="Olvidé la contraseña"  
-            BackgroundColor="Transparent" 
-            TextColor="{ StaticResource Primary }" 
-            BorderWidth="0"      
-            FontAttributes="Bold"
-            FontSize="Medium"
-            FontFamily="Open Sans"
-            HorizontalOptions="End"
-            Margin="0, 10, 0, 0"/>
+                Text="Olvidé la contraseña"  
+                BackgroundColor="Transparent" 
+                TextColor="{ StaticResource Primary }" 
+                BorderWidth="0"      
+                FontAttributes="Bold"
+                FontSize="Medium"
+                FontFamily="Open Sans"
+                HorizontalOptions="End"
+                Margin="0, 10, 0, 0"/>
 
 
             <Button 
-            Text="Inciar sesión"  
-            BackgroundColor="{ StaticResource Primary }"
-            TextColor="{ StaticResource White }" 
-            BorderWidth="0"    
-            FontAttributes="Bold"
-            FontSize="Medium"
-            FontFamily="Open Sans"
-            HorizontalOptions="Center"
-            CornerRadius="50"
-            WidthRequest="200"
-            Margin="0, 15, 0, 0"/>
+                Text="Inciar sesión"  
+                BackgroundColor="{ StaticResource Primary }"
+                TextColor="{ StaticResource White }" 
+                BorderWidth="0"    
+                FontAttributes="Bold"
+                FontSize="Medium"
+                FontFamily="Open Sans"
+                HorizontalOptions="Center"
+                CornerRadius="50"
+                WidthRequest="200"
+                Margin="0, 15, 0, 0"/>
 
             <HorizontalStackLayout 
                 VerticalOptions="FillAndExpand" 
                 HorizontalOptions="Center" >
 
                 <Label 
-                Text="¿No tienes una cuenta?" 
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                FontSize="Small" />
+                    Text="¿No tienes una cuenta?" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="Small" />
 
                 <Button 
-                Text="Registrate"  
-                BackgroundColor="Transparent" 
-                TextColor="{ StaticResource Primary }" 
-                BorderWidth="0"      
-                FontAttributes="Bold"
-                FontSize="Small"
-                FontFamily="Open Sans"
-                HorizontalOptions="Center" 
-                VerticalOptions="Center" />
+                    Text="Registrate"  
+                    BackgroundColor="Transparent" 
+                    TextColor="{ StaticResource Primary }" 
+                    BorderWidth="0"      
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    FontFamily="Open Sans"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
 
             </HorizontalStackLayout>
 

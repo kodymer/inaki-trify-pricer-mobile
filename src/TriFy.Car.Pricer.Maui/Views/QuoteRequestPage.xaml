@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:TriFy.Car.Pricer.Maui.Controls"
+             x:Class="TriFy.Car.Pricer.Views.QuoteRequestPage"
+             Title="LoginPage"
+             NavigationPage.HasNavigationBar="true">
+
+    <ScrollView>
+
+        <StackLayout 
+            Margin="25, 35, 25, 10">
+
+            <Image 
+                Source="logo.png"              
+                WidthRequest="130" 
+                Margin="0, 0, 0, 10" />
+
+            <controls:HorizontalFieldView 
+                x:Name="licensePlate"
+                Keyboard="Email" 
+                DisplayName="Placa" />
+
+            <controls:HorizontalFieldView
+                x:Name="brand"
+                Keyboard="Default" 
+                IsPassword="True"
+                DisplayName="Contraseña" />
+
+            <controls:HorizontalFieldView 
+                x:Name="model"
+                Keyboard="Default" 
+                DisplayName="Campaña" />
+
+            <controls:VerticalFieldView 
+                x:Name="info"
+                Keyboard="Default" 
+                DisplayName="Información adicional"
+                ControlTemplate="{StaticResource Multiline}"/>
+
+            <Button 
+                Text="Inciar sesión"  
+                BackgroundColor="{ StaticResource Primary }"
+                TextColor="{ StaticResource White }" 
+                BorderWidth="0"    
+                FontAttributes="Bold"
+                FontSize="Medium"
+                FontFamily="Open Sans"
+                HorizontalOptions="Center"
+                CornerRadius="50"
+                WidthRequest="200"
+                Margin="0, 15, 0, 0"/>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

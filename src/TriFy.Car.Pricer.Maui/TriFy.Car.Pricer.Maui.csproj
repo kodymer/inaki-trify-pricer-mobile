@@ -68,16 +68,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Controls\HorizontalFieldView.xaml.cs">
+	    <DependentUpon>HorizontalFieldView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Controls\VerticalFieldView.xaml.cs">
 	    <DependentUpon>VerticalFieldView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\HorizontalFieldView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\VerticalFieldView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\QuoteRequestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

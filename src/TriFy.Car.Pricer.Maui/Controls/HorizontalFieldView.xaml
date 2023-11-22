@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriFy.Car.Pricer.Maui.Controls.HorizontalFieldView"
+             x:Name="this">
+
+    <HorizontalStackLayout 
+        BindingContext="{x:Reference this}">
+        
+        <Label 
+            Text="{Binding DisplayName, FallbackValue='Field'}" 
+            HorizontalOptions="Start"
+            FontAttributes="Bold"
+            FontSize="Small"
+            Margin="10, 15, 0, 5" />
+        
+        <Frame 
+            CornerRadius="10" 
+            BackgroundColor="#465688" 
+            BorderColor="Transparent" 
+            HasShadow="True" 
+            HorizontalOptions="FillAndExpand" 
+            Padding="20, 5, 20, 3" 
+            HeightRequest="50">
+            
+            <Entry 
+                Keyboard="{Binding Keyboard, FallbackValue={ x:Static Keyboard.Default }}" 
+                TextColor="{StaticResource White}" 
+                BackgroundColor="Transparent" 
+                IsPassword="{Binding IsPassword}"
+                FontSize="Medium" 
+                Text="{Binding Value}"/>
+            
+        </Frame>
+        
+    </HorizontalStackLayout>
+    
+</ContentView>
